@@ -1,5 +1,10 @@
 type ParticleType = {
     id?: string;
+    speed?: number;
+    value?: number;
+    opacity?: number;
+    distance?: number;
+    area?: number
     type?: "circle" | "bubbles";
 }
 

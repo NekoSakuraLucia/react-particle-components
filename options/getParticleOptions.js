@@ -1,27 +1,24 @@
-export const getParticleOptions = (type) => {
+export const getParticleOptions = (type, speed, value, opacity, distance, area) => {
     switch (type) {
         case "bubbles":
             return {
                 particles: {
                     number: {
-                        value: 10,
+                        value: value,
                         density: {
                             enable: true,
-                            area: 800,
+                            area: area,
                         },
                     },
-                    shape: {
-                        type: "circle",
-                    },
                     opacity: {
-                        value: 0.3,
+                        value: opacity,
                     },
                     size: {
-                        value: { min: 10, max: 20 },
+                        value: { min: 1, max: 5 },
                     },
                     move: {
                         enable: true,
-                        speed: 2,
+                        speed: speed,
                         direction: "none",
                         random: true,
                         straight: false,
@@ -36,24 +33,24 @@ export const getParticleOptions = (type) => {
             return {
                 particles: {
                     number: {
-                        value: 80,
+                        value: value,
                         density: {
                             enable: true,
-                            area: 800,
+                            area: area,
                         },
                     },
                     shape: {
                         type: "circle",
                     },
                     opacity: {
-                        value: 0.5,
+                        value: opacity,
                     },
                     size: {
                         value: { min: 1, max: 5 },
                     },
                     move: {
                         enable: true,
-                        speed: 2,
+                        speed: speed,
                         direction: "none",
                         random: false,
                         straight: false,
@@ -63,9 +60,9 @@ export const getParticleOptions = (type) => {
                     },
                     links: {
                         enable: true,
-                        distance: 150,
+                        distance: distance,
                         color: "#ffffff",
-                        opacity: 0.5,
+                        opacity: opacity,
                         width: 1,
                     },
                 },

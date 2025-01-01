@@ -3,7 +3,17 @@ import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
 import { getParticleOptions } from "../options/getParticleOptions";
 
-const ParticleComponent = ({ id = "neko-tsparticles", type = "circle" }) => {
+const ParticleComponent = (
+    {
+        id = "neko-tsparticles",
+        type = "circle",
+        speed = 2,
+        value = 80,
+        opacity = 0.5,
+        distance = 150,
+        area = 800
+    }
+) => {
     const [init, setInit] = useState(false);
 
     useEffect(() => {
@@ -48,7 +58,7 @@ const ParticleComponent = ({ id = "neko-tsparticles", type = "circle" }) => {
                                 },
                             },
                         },
-                        ...getParticleOptions(type),
+                        ...getParticleOptions(type, speed, value, opacity, distance, area),
                         detectRetina: true,
                     }}
                 />

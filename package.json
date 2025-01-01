@@ -1,9 +1,15 @@
 {
   "name": "react-particle-components",
-  "version": "0.0.6",
+  "version": "0.0.8-beta",
   "description": "React components for adding beautiful tsParticles effects with minimal setup.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
   "type": "module",
   "scripts": {
     "build": "tsup"

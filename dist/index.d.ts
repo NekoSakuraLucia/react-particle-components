@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-type ParticleType = {
+interface ParticleType {
     id?: string;
     speed?: number;
     value?: number;

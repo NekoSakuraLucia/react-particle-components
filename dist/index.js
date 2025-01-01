@@ -97,6 +97,22 @@ var ParticleComponent = ({
     console.error("React hooks are not available.");
     return null;
   }
+  if (!React | !React.createElement) {
+    console.error("React is not properly initialized.");
+    return null;
+  }
+  if (!Particles || !initParticlesEngine) {
+    console.error("tsParticles is not properly initialized. Ensure @tsparticles/react is installed and imported.");
+    return null;
+  }
+  if (typeof speed !== "number" || speed <= 0) {
+    console.error("Invalid speed value. It must be a positive number.");
+    return null;
+  }
+  if (typeof value !== "number" || value <= 0) {
+    console.error("Invalid value for particle count. It must be a positive number.");
+    return null;
+  }
   const [init, setInit] = useState(false);
   useEffect(() => {
     initParticlesEngine(async (engine) => {

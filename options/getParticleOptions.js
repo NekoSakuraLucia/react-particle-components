@@ -16,6 +16,12 @@ export const getParticleOptions = (type, speed, value, opacity, distance, area, 
                     size: {
                         value: { min: 1, max: 5 },
                     },
+                    color: {
+                        value: color,
+                    },
+                    shape: {
+                        type: "circle",
+                    },
                     move: {
                         enable: true,
                         speed: speed,

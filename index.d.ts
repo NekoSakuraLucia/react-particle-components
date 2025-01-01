@@ -1,4 +1,6 @@
-type ParticleType = {
+import { FC } from 'react';
+
+interface ParticleType {
     id?: string;
     speed?: number;
     value?: number;
@@ -6,13 +8,9 @@ type ParticleType = {
     distance?: number;
     area?: number;
     color?: string;
-    type?: "circle" | "bubbles";
+    type?: 'circle' | 'bubbles';
 }
 
-declare module "react-particle-components" {
-    import { FC } from "react";
+declare const ParticleComponent: FC<ParticleType>;
 
-    const ParticleComponent: FC<ParticleType>;
-
-    export default ParticleComponent;
-}
+export default ParticleComponent;

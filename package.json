@@ -23,6 +23,7 @@
   "homepage": "https://github.com/NekoSakuraLucia/react-particle-components#readme",
   "dependencies": {
     "@tsparticles/react": "^3.0.0",
+    "@tsparticles/slim": "^3.7.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   }

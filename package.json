@@ -1,0 +1,29 @@
+{
+  "name": "react-particle-components",
+  "version": "0.0.5",
+  "description": "A set of components for ts-praticles React that allows you to easily add beautiful particle effects. Just import and use, no complicated setup or coding required. Great for adding visual interest to your UI. ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NekoSakuraLucia/react-particle-components.git"
+  },
+  "keywords": [
+    "Particle",
+    "React",
+    "ts-particle/react"
+  ],
+  "author": "NekoSakuraLucia",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/NekoSakuraLucia/react-particle-components/issues"
+  },
+  "homepage": "https://github.com/NekoSakuraLucia/react-particle-components#readme",
+  "dependencies": {
+    "@tsparticles/react": "^3.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  }
+}

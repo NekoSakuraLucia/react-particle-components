@@ -1,4 +1,4 @@
-export const getParticleOptions = (type, speed, value, opacity, distance, area) => {
+export const getParticleOptions = (type, speed, value, opacity, distance, area, color) => {
     switch (type) {
         case "bubbles":
             return {
@@ -61,7 +61,7 @@ export const getParticleOptions = (type, speed, value, opacity, distance, area) 
                     links: {
                         enable: true,
                         distance: distance,
-                        color: "#ffffff",
+                        color: color,
                         opacity: opacity,
                         width: 1,
                     },

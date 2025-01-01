@@ -11,7 +11,8 @@ const ParticleComponent = (
         value = 80,
         opacity = 0.5,
         distance = 150,
-        area = 800
+        area = 800,
+        color = "#ffffff"
     }
 ) => {
     const [init, setInit] = useState(false);
@@ -58,7 +59,7 @@ const ParticleComponent = (
                                 },
                             },
                         },
-                        ...getParticleOptions(type, speed, value, opacity, distance, area),
+                        ...getParticleOptions(type, speed, value, opacity, distance, area, color),
                         detectRetina: true,
                     }}
                 />

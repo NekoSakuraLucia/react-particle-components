@@ -4,7 +4,8 @@ type ParticleType = {
     value?: number;
     opacity?: number;
     distance?: number;
-    area?: number
+    area?: number;
+    color?: string;
     type?: "circle" | "bubbles";
 }
 

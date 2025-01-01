@@ -15,6 +15,11 @@ const ParticleComponent = (
         color = "#ffffff"
     }
 ) => {
+    if (!React || !useState || !useEffect) {
+        console.error("React hooks are not available.");
+        return null;
+    }
+
     const [init, setInit] = useState(false);
 
     useEffect(() => {

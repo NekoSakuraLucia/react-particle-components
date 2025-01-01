@@ -2,7 +2,7 @@ import React, { useCallback, useEffect, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
 
-const ParticleComponent = () => {
+const ParticleComponent = ({ id = "neko-tsparticles" }) => {
     const [init, setInit] = useState(false);
 
     useEffect(() => {
@@ -21,15 +21,10 @@ const ParticleComponent = () => {
         <>
             {init && (
                 <Particles
-                    id="tsparticles"
+                    id={id}
                     particlesLoaded={particlesLoaded}
                     options={{
-                        background: {
-                            color: {
-                                value: "#0d47a1",
-                            },
-                        },
-                        fpsLimit: 120,
+                        fpsLimit: 60,
                         interactivity: {
                             events: {
                                 onClick: {
@@ -48,7 +43,7 @@ const ParticleComponent = () => {
                                 },
                                 repulse: {
                                     distance: 200,
-                                    duration: 0.4,
+                                    duration: 0.2,
                                 },
                             },
                         },
@@ -70,7 +65,7 @@ const ParticleComponent = () => {
                                     default: "bounce",
                                 },
                                 random: false,
-                                speed: 6,
+                                speed: 2,
                                 straight: false,
                             },
                             number: {
